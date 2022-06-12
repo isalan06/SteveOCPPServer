@@ -8,11 +8,9 @@ services:
 
   app:
     build: .
-    links:
-      - "db:mariadb"
     volumes:
       - .:/code
     ports:
-      - "8080:8080"
+      - "8180:8180"
     depends_on:
       - db
