@@ -41,7 +41,7 @@ public enum SteveConfiguration {
     // Mapping for CXF SOAP services
     private final String cxfMapping = "/services/*";
     // Dummy service path
-    private final String routerEndpointPath = "/CentralSystemService";
+    private final String routerEndpointPath = "/echoSocket";//"/CentralSystemService";
     // Time zone for the application and database connections
     private final String timeZoneId = "UTC";  // or ZoneId.systemDefault().getId();
 
