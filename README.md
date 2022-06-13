@@ -170,3 +170,5 @@ Are you having issues?
 -----
 See the [FAQ](https://github.com/RWTH-i5-IDSG/steve/wiki/FAQ)
 
+pm2 start
+sudo pm2 start "echo 'oringnetubuntu' | sudo -S java -jar target/steve.jar" --name SteveOCPPServer
