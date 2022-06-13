@@ -66,12 +66,12 @@ public class OcppTag extends TableImpl<OcppTagRecord> {
     /**
      * The column <code>stevedb.ocpp_tag.parent_id_tag</code>.
      */
-    public final TableField<OcppTagRecord, String> PARENT_ID_TAG = createField(DSL.name("parent_id_tag"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<OcppTagRecord, String> PARENT_ID_TAG = createField(DSL.name("parent_id_tag"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.ocpp_tag.expiry_date</code>.
      */
-    public final TableField<OcppTagRecord, DateTime> EXPIRY_DATE = createField(DSL.name("expiry_date"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<OcppTagRecord, DateTime> EXPIRY_DATE = createField(DSL.name("expiry_date"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.ocpp_tag.max_active_transaction_count</code>.
@@ -81,7 +81,7 @@ public class OcppTag extends TableImpl<OcppTagRecord> {
     /**
      * The column <code>stevedb.ocpp_tag.note</code>.
      */
-    public final TableField<OcppTagRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<OcppTagRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB, this, "");
 
     private OcppTag(Name alias, Table<OcppTagRecord> aliased) {
         this(alias, aliased, null);

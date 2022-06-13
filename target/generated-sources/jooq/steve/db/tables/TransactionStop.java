@@ -59,17 +59,17 @@ public class TransactionStop extends TableImpl<TransactionStopRecord> {
     /**
      * The column <code>stevedb.transaction_stop.event_timestamp</code>.
      */
-    public final TableField<TransactionStopRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("current_timestamp(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStopRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_stop.event_actor</code>.
      */
-    public final TableField<TransactionStopRecord, TransactionStopEventActor> EVENT_ACTOR = createField(DSL.name("event_actor"), SQLDataType.VARCHAR(7).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)).asEnumDataType(jooq.steve.db.enums.TransactionStopEventActor.class), this, "");
+    public final TableField<TransactionStopRecord, TransactionStopEventActor> EVENT_ACTOR = createField(DSL.name("event_actor"), SQLDataType.VARCHAR(7).asEnumDataType(jooq.steve.db.enums.TransactionStopEventActor.class), this, "");
 
     /**
      * The column <code>stevedb.transaction_stop.stop_timestamp</code>.
      */
-    public final TableField<TransactionStopRecord, DateTime> STOP_TIMESTAMP = createField(DSL.name("stop_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("current_timestamp(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStopRecord, DateTime> STOP_TIMESTAMP = createField(DSL.name("stop_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_stop.stop_value</code>.
@@ -79,7 +79,7 @@ public class TransactionStop extends TableImpl<TransactionStopRecord> {
     /**
      * The column <code>stevedb.transaction_stop.stop_reason</code>.
      */
-    public final TableField<TransactionStopRecord, String> STOP_REASON = createField(DSL.name("stop_reason"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<TransactionStopRecord, String> STOP_REASON = createField(DSL.name("stop_reason"), SQLDataType.VARCHAR(255), this, "");
 
     private TransactionStop(Name alias, Table<TransactionStopRecord> aliased) {
         this(alias, aliased, null);

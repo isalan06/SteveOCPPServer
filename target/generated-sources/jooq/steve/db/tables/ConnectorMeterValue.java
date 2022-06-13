@@ -59,47 +59,47 @@ public class ConnectorMeterValue extends TableImpl<ConnectorMeterValueRecord> {
     /**
      * The column <code>stevedb.connector_meter_value.transaction_pk</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<ConnectorMeterValueRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.value_timestamp</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, DateTime> VALUE_TIMESTAMP = createField(DSL.name("value_timestamp"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ConnectorMeterValueRecord, DateTime> VALUE_TIMESTAMP = createField(DSL.name("value_timestamp"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.connector_meter_value.value</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> VALUE = createField(DSL.name("value"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> VALUE = createField(DSL.name("value"), SQLDataType.CLOB, this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.reading_context</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> READING_CONTEXT = createField(DSL.name("reading_context"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> READING_CONTEXT = createField(DSL.name("reading_context"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.format</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> FORMAT = createField(DSL.name("format"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> FORMAT = createField(DSL.name("format"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.measurand</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> MEASURAND = createField(DSL.name("measurand"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> MEASURAND = createField(DSL.name("measurand"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.location</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> LOCATION = createField(DSL.name("location"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> LOCATION = createField(DSL.name("location"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.unit</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> UNIT = createField(DSL.name("unit"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> UNIT = createField(DSL.name("unit"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.connector_meter_value.phase</code>.
      */
-    public final TableField<ConnectorMeterValueRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ConnectorMeterValueRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.VARCHAR(255), this, "");
 
     private ConnectorMeterValue(Name alias, Table<ConnectorMeterValueRecord> aliased) {
         this(alias, aliased, null);

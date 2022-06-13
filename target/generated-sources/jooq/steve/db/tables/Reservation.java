@@ -66,7 +66,7 @@ public class Reservation extends TableImpl<ReservationRecord> {
     /**
      * The column <code>stevedb.reservation.transaction_pk</code>.
      */
-    public final TableField<ReservationRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<ReservationRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.reservation.id_tag</code>.
@@ -76,12 +76,12 @@ public class Reservation extends TableImpl<ReservationRecord> {
     /**
      * The column <code>stevedb.reservation.start_datetime</code>.
      */
-    public final TableField<ReservationRecord, DateTime> START_DATETIME = createField(DSL.name("start_datetime"), SQLDataType.TIMESTAMP(0).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ReservationRecord, DateTime> START_DATETIME = createField(DSL.name("start_datetime"), SQLDataType.TIMESTAMP(0), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.reservation.expiry_datetime</code>.
      */
-    public final TableField<ReservationRecord, DateTime> EXPIRY_DATETIME = createField(DSL.name("expiry_datetime"), SQLDataType.TIMESTAMP(0).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ReservationRecord, DateTime> EXPIRY_DATETIME = createField(DSL.name("expiry_datetime"), SQLDataType.TIMESTAMP(0), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.reservation.status</code>.

@@ -49,37 +49,37 @@ public class TransactionStopFailed extends TableImpl<TransactionStopFailedRecord
     /**
      * The column <code>stevedb.transaction_stop_failed.transaction_pk</code>.
      */
-    public final TableField<TransactionStopFailedRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<TransactionStopFailedRecord, Integer> TRANSACTION_PK = createField(DSL.name("transaction_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.transaction_stop_failed.event_timestamp</code>.
      */
-    public final TableField<TransactionStopFailedRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("current_timestamp(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStopFailedRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_stop_failed.event_actor</code>.
      */
-    public final TableField<TransactionStopFailedRecord, TransactionStopFailedEventActor> EVENT_ACTOR = createField(DSL.name("event_actor"), SQLDataType.VARCHAR(7).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)).asEnumDataType(jooq.steve.db.enums.TransactionStopFailedEventActor.class), this, "");
+    public final TableField<TransactionStopFailedRecord, TransactionStopFailedEventActor> EVENT_ACTOR = createField(DSL.name("event_actor"), SQLDataType.VARCHAR(7).asEnumDataType(jooq.steve.db.enums.TransactionStopFailedEventActor.class), this, "");
 
     /**
      * The column <code>stevedb.transaction_stop_failed.stop_timestamp</code>.
      */
-    public final TableField<TransactionStopFailedRecord, DateTime> STOP_TIMESTAMP = createField(DSL.name("stop_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("current_timestamp(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStopFailedRecord, DateTime> STOP_TIMESTAMP = createField(DSL.name("stop_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_stop_failed.stop_value</code>.
      */
-    public final TableField<TransactionStopFailedRecord, String> STOP_VALUE = createField(DSL.name("stop_value"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<TransactionStopFailedRecord, String> STOP_VALUE = createField(DSL.name("stop_value"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.transaction_stop_failed.stop_reason</code>.
      */
-    public final TableField<TransactionStopFailedRecord, String> STOP_REASON = createField(DSL.name("stop_reason"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<TransactionStopFailedRecord, String> STOP_REASON = createField(DSL.name("stop_reason"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.transaction_stop_failed.fail_reason</code>.
      */
-    public final TableField<TransactionStopFailedRecord, String> FAIL_REASON = createField(DSL.name("fail_reason"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<TransactionStopFailedRecord, String> FAIL_REASON = createField(DSL.name("fail_reason"), SQLDataType.CLOB, this, "");
 
     private TransactionStopFailed(Name alias, Table<TransactionStopFailedRecord> aliased) {
         this(alias, aliased, null);

@@ -60,7 +60,7 @@ public class SchemaVersion extends TableImpl<SchemaVersionRecord> {
     /**
      * The column <code>stevedb.schema_version.version</code>.
      */
-    public final TableField<SchemaVersionRecord, String> VERSION = createField(DSL.name("version"), SQLDataType.VARCHAR(50).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<SchemaVersionRecord, String> VERSION = createField(DSL.name("version"), SQLDataType.VARCHAR(50), this, "");
 
     /**
      * The column <code>stevedb.schema_version.description</code>.
@@ -80,7 +80,7 @@ public class SchemaVersion extends TableImpl<SchemaVersionRecord> {
     /**
      * The column <code>stevedb.schema_version.checksum</code>.
      */
-    public final TableField<SchemaVersionRecord, Integer> CHECKSUM = createField(DSL.name("checksum"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<SchemaVersionRecord, Integer> CHECKSUM = createField(DSL.name("checksum"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.schema_version.installed_by</code>.
@@ -90,7 +90,7 @@ public class SchemaVersion extends TableImpl<SchemaVersionRecord> {
     /**
      * The column <code>stevedb.schema_version.installed_on</code>.
      */
-    public final TableField<SchemaVersionRecord, DateTime> INSTALLED_ON = createField(DSL.name("installed_on"), SQLDataType.TIMESTAMP(0).nullable(false).defaultValue(DSL.field("current_timestamp()", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<SchemaVersionRecord, DateTime> INSTALLED_ON = createField(DSL.name("installed_on"), SQLDataType.TIMESTAMP(0).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.schema_version.execution_time</code>.

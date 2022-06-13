@@ -53,27 +53,27 @@ public class Address extends TableImpl<AddressRecord> {
     /**
      * The column <code>stevedb.address.street</code>.
      */
-    public final TableField<AddressRecord, String> STREET = createField(DSL.name("street"), SQLDataType.VARCHAR(1000).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<AddressRecord, String> STREET = createField(DSL.name("street"), SQLDataType.VARCHAR(1000), this, "");
 
     /**
      * The column <code>stevedb.address.house_number</code>.
      */
-    public final TableField<AddressRecord, String> HOUSE_NUMBER = createField(DSL.name("house_number"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<AddressRecord, String> HOUSE_NUMBER = createField(DSL.name("house_number"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.address.zip_code</code>.
      */
-    public final TableField<AddressRecord, String> ZIP_CODE = createField(DSL.name("zip_code"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<AddressRecord, String> ZIP_CODE = createField(DSL.name("zip_code"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.address.city</code>.
      */
-    public final TableField<AddressRecord, String> CITY = createField(DSL.name("city"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<AddressRecord, String> CITY = createField(DSL.name("city"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.address.country</code>.
      */
-    public final TableField<AddressRecord, String> COUNTRY = createField(DSL.name("country"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<AddressRecord, String> COUNTRY = createField(DSL.name("country"), SQLDataType.VARCHAR(255), this, "");
 
     private Address(Name alias, Table<AddressRecord> aliased) {
         this(alias, aliased, null);

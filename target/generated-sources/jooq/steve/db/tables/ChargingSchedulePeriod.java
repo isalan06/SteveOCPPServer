@@ -68,7 +68,7 @@ public class ChargingSchedulePeriod extends TableImpl<ChargingSchedulePeriodReco
     /**
      * The column <code>stevedb.charging_schedule_period.number_phases</code>.
      */
-    public final TableField<ChargingSchedulePeriodRecord, Integer> NUMBER_PHASES = createField(DSL.name("number_phases"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<ChargingSchedulePeriodRecord, Integer> NUMBER_PHASES = createField(DSL.name("number_phases"), SQLDataType.INTEGER, this, "");
 
     private ChargingSchedulePeriod(Name alias, Table<ChargingSchedulePeriodRecord> aliased) {
         this(alias, aliased, null);

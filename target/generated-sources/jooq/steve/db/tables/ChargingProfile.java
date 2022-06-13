@@ -74,27 +74,27 @@ public class ChargingProfile extends TableImpl<ChargingProfileRecord> {
     /**
      * The column <code>stevedb.charging_profile.recurrency_kind</code>.
      */
-    public final TableField<ChargingProfileRecord, String> RECURRENCY_KIND = createField(DSL.name("recurrency_kind"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargingProfileRecord, String> RECURRENCY_KIND = createField(DSL.name("recurrency_kind"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charging_profile.valid_from</code>.
      */
-    public final TableField<ChargingProfileRecord, DateTime> VALID_FROM = createField(DSL.name("valid_from"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargingProfileRecord, DateTime> VALID_FROM = createField(DSL.name("valid_from"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charging_profile.valid_to</code>.
      */
-    public final TableField<ChargingProfileRecord, DateTime> VALID_TO = createField(DSL.name("valid_to"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargingProfileRecord, DateTime> VALID_TO = createField(DSL.name("valid_to"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charging_profile.duration_in_seconds</code>.
      */
-    public final TableField<ChargingProfileRecord, Integer> DURATION_IN_SECONDS = createField(DSL.name("duration_in_seconds"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<ChargingProfileRecord, Integer> DURATION_IN_SECONDS = createField(DSL.name("duration_in_seconds"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.charging_profile.start_schedule</code>.
      */
-    public final TableField<ChargingProfileRecord, DateTime> START_SCHEDULE = createField(DSL.name("start_schedule"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargingProfileRecord, DateTime> START_SCHEDULE = createField(DSL.name("start_schedule"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charging_profile.charging_rate_unit</code>.
@@ -104,17 +104,17 @@ public class ChargingProfile extends TableImpl<ChargingProfileRecord> {
     /**
      * The column <code>stevedb.charging_profile.min_charging_rate</code>.
      */
-    public final TableField<ChargingProfileRecord, BigDecimal> MIN_CHARGING_RATE = createField(DSL.name("min_charging_rate"), SQLDataType.DECIMAL(15, 1).defaultValue(DSL.inline("NULL", SQLDataType.DECIMAL)), this, "");
+    public final TableField<ChargingProfileRecord, BigDecimal> MIN_CHARGING_RATE = createField(DSL.name("min_charging_rate"), SQLDataType.DECIMAL(15, 1), this, "");
 
     /**
      * The column <code>stevedb.charging_profile.description</code>.
      */
-    public final TableField<ChargingProfileRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargingProfileRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charging_profile.note</code>.
      */
-    public final TableField<ChargingProfileRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<ChargingProfileRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB, this, "");
 
     private ChargingProfile(Name alias, Table<ChargingProfileRecord> aliased) {
         this(alias, aliased, null);

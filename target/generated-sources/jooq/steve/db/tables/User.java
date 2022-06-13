@@ -59,47 +59,47 @@ public class User extends TableImpl<UserRecord> {
     /**
      * The column <code>stevedb.user.ocpp_tag_pk</code>.
      */
-    public final TableField<UserRecord, Integer> OCPP_TAG_PK = createField(DSL.name("ocpp_tag_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<UserRecord, Integer> OCPP_TAG_PK = createField(DSL.name("ocpp_tag_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.user.address_pk</code>.
      */
-    public final TableField<UserRecord, Integer> ADDRESS_PK = createField(DSL.name("address_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<UserRecord, Integer> ADDRESS_PK = createField(DSL.name("address_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.user.first_name</code>.
      */
-    public final TableField<UserRecord, String> FIRST_NAME = createField(DSL.name("first_name"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<UserRecord, String> FIRST_NAME = createField(DSL.name("first_name"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.user.last_name</code>.
      */
-    public final TableField<UserRecord, String> LAST_NAME = createField(DSL.name("last_name"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<UserRecord, String> LAST_NAME = createField(DSL.name("last_name"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.user.birth_day</code>.
      */
-    public final TableField<UserRecord, LocalDate> BIRTH_DAY = createField(DSL.name("birth_day"), SQLDataType.DATE.defaultValue(DSL.inline("NULL", SQLDataType.DATE)), this, "", new DateConverter());
+    public final TableField<UserRecord, LocalDate> BIRTH_DAY = createField(DSL.name("birth_day"), SQLDataType.DATE, this, "", new DateConverter());
 
     /**
      * The column <code>stevedb.user.sex</code>.
      */
-    public final TableField<UserRecord, String> SEX = createField(DSL.name("sex"), SQLDataType.CHAR(1).defaultValue(DSL.inline("NULL", SQLDataType.CHAR)), this, "");
+    public final TableField<UserRecord, String> SEX = createField(DSL.name("sex"), SQLDataType.CHAR(1), this, "");
 
     /**
      * The column <code>stevedb.user.phone</code>.
      */
-    public final TableField<UserRecord, String> PHONE = createField(DSL.name("phone"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<UserRecord, String> PHONE = createField(DSL.name("phone"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.user.e_mail</code>.
      */
-    public final TableField<UserRecord, String> E_MAIL = createField(DSL.name("e_mail"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<UserRecord, String> E_MAIL = createField(DSL.name("e_mail"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.user.note</code>.
      */
-    public final TableField<UserRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<UserRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB, this, "");
 
     private User(Name alias, Table<UserRecord> aliased) {
         this(alias, aliased, null);

@@ -61,7 +61,7 @@ public class TransactionStart extends TableImpl<TransactionStartRecord> {
     /**
      * The column <code>stevedb.transaction_start.event_timestamp</code>.
      */
-    public final TableField<TransactionStartRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("current_timestamp(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStartRecord, DateTime> EVENT_TIMESTAMP = createField(DSL.name("event_timestamp"), SQLDataType.TIMESTAMP(6).nullable(false).defaultValue(DSL.field("CURRENT_TIMESTAMP(6)", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_start.connector_pk</code>.
@@ -76,12 +76,12 @@ public class TransactionStart extends TableImpl<TransactionStartRecord> {
     /**
      * The column <code>stevedb.transaction_start.start_timestamp</code>.
      */
-    public final TableField<TransactionStartRecord, DateTime> START_TIMESTAMP = createField(DSL.name("start_timestamp"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<TransactionStartRecord, DateTime> START_TIMESTAMP = createField(DSL.name("start_timestamp"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.transaction_start.start_value</code>.
      */
-    public final TableField<TransactionStartRecord, String> START_VALUE = createField(DSL.name("start_value"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<TransactionStartRecord, String> START_VALUE = createField(DSL.name("start_value"), SQLDataType.VARCHAR(255), this, "");
 
     private TransactionStart(Name alias, Table<TransactionStartRecord> aliased) {
         this(alias, aliased, null);

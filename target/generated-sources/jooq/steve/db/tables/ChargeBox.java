@@ -66,117 +66,117 @@ public class ChargeBox extends TableImpl<ChargeBoxRecord> {
     /**
      * The column <code>stevedb.charge_box.endpoint_address</code>.
      */
-    public final TableField<ChargeBoxRecord, String> ENDPOINT_ADDRESS = createField(DSL.name("endpoint_address"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> ENDPOINT_ADDRESS = createField(DSL.name("endpoint_address"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.ocpp_protocol</code>.
      */
-    public final TableField<ChargeBoxRecord, String> OCPP_PROTOCOL = createField(DSL.name("ocpp_protocol"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> OCPP_PROTOCOL = createField(DSL.name("ocpp_protocol"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.registration_status</code>.
      */
-    public final TableField<ChargeBoxRecord, String> REGISTRATION_STATUS = createField(DSL.name("registration_status"), SQLDataType.VARCHAR(255).nullable(false).defaultValue(DSL.inline("'Accepted'", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> REGISTRATION_STATUS = createField(DSL.name("registration_status"), SQLDataType.VARCHAR(255).nullable(false).defaultValue(DSL.inline("Accepted", SQLDataType.VARCHAR)), this, "");
 
     /**
      * The column <code>stevedb.charge_box.charge_point_vendor</code>.
      */
-    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_VENDOR = createField(DSL.name("charge_point_vendor"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_VENDOR = createField(DSL.name("charge_point_vendor"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.charge_point_model</code>.
      */
-    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_MODEL = createField(DSL.name("charge_point_model"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_MODEL = createField(DSL.name("charge_point_model"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.charge_point_serial_number</code>.
      */
-    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_SERIAL_NUMBER = createField(DSL.name("charge_point_serial_number"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> CHARGE_POINT_SERIAL_NUMBER = createField(DSL.name("charge_point_serial_number"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.charge_box_serial_number</code>.
      */
-    public final TableField<ChargeBoxRecord, String> CHARGE_BOX_SERIAL_NUMBER = createField(DSL.name("charge_box_serial_number"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> CHARGE_BOX_SERIAL_NUMBER = createField(DSL.name("charge_box_serial_number"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.fw_version</code>.
      */
-    public final TableField<ChargeBoxRecord, String> FW_VERSION = createField(DSL.name("fw_version"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> FW_VERSION = createField(DSL.name("fw_version"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.fw_update_status</code>.
      */
-    public final TableField<ChargeBoxRecord, String> FW_UPDATE_STATUS = createField(DSL.name("fw_update_status"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> FW_UPDATE_STATUS = createField(DSL.name("fw_update_status"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.fw_update_timestamp</code>.
      */
-    public final TableField<ChargeBoxRecord, DateTime> FW_UPDATE_TIMESTAMP = createField(DSL.name("fw_update_timestamp"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargeBoxRecord, DateTime> FW_UPDATE_TIMESTAMP = createField(DSL.name("fw_update_timestamp"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charge_box.iccid</code>.
      */
-    public final TableField<ChargeBoxRecord, String> ICCID = createField(DSL.name("iccid"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> ICCID = createField(DSL.name("iccid"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.imsi</code>.
      */
-    public final TableField<ChargeBoxRecord, String> IMSI = createField(DSL.name("imsi"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> IMSI = createField(DSL.name("imsi"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.meter_type</code>.
      */
-    public final TableField<ChargeBoxRecord, String> METER_TYPE = createField(DSL.name("meter_type"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> METER_TYPE = createField(DSL.name("meter_type"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.meter_serial_number</code>.
      */
-    public final TableField<ChargeBoxRecord, String> METER_SERIAL_NUMBER = createField(DSL.name("meter_serial_number"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> METER_SERIAL_NUMBER = createField(DSL.name("meter_serial_number"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.diagnostics_status</code>.
      */
-    public final TableField<ChargeBoxRecord, String> DIAGNOSTICS_STATUS = createField(DSL.name("diagnostics_status"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> DIAGNOSTICS_STATUS = createField(DSL.name("diagnostics_status"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>stevedb.charge_box.diagnostics_timestamp</code>.
      */
-    public final TableField<ChargeBoxRecord, DateTime> DIAGNOSTICS_TIMESTAMP = createField(DSL.name("diagnostics_timestamp"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargeBoxRecord, DateTime> DIAGNOSTICS_TIMESTAMP = createField(DSL.name("diagnostics_timestamp"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charge_box.last_heartbeat_timestamp</code>.
      */
-    public final TableField<ChargeBoxRecord, DateTime> LAST_HEARTBEAT_TIMESTAMP = createField(DSL.name("last_heartbeat_timestamp"), SQLDataType.TIMESTAMP(6).defaultValue(DSL.inline("NULL", SQLDataType.TIMESTAMP)), this, "", new DateTimeConverter());
+    public final TableField<ChargeBoxRecord, DateTime> LAST_HEARTBEAT_TIMESTAMP = createField(DSL.name("last_heartbeat_timestamp"), SQLDataType.TIMESTAMP(6), this, "", new DateTimeConverter());
 
     /**
      * The column <code>stevedb.charge_box.description</code>.
      */
-    public final TableField<ChargeBoxRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<ChargeBoxRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.CLOB, this, "");
 
     /**
      * The column <code>stevedb.charge_box.note</code>.
      */
-    public final TableField<ChargeBoxRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB.defaultValue(DSL.inline("NULL", SQLDataType.CLOB)), this, "");
+    public final TableField<ChargeBoxRecord, String> NOTE = createField(DSL.name("note"), SQLDataType.CLOB, this, "");
 
     /**
      * The column <code>stevedb.charge_box.location_latitude</code>.
      */
-    public final TableField<ChargeBoxRecord, BigDecimal> LOCATION_LATITUDE = createField(DSL.name("location_latitude"), SQLDataType.DECIMAL(11, 8).defaultValue(DSL.inline("NULL", SQLDataType.DECIMAL)), this, "");
+    public final TableField<ChargeBoxRecord, BigDecimal> LOCATION_LATITUDE = createField(DSL.name("location_latitude"), SQLDataType.DECIMAL(11, 8), this, "");
 
     /**
      * The column <code>stevedb.charge_box.location_longitude</code>.
      */
-    public final TableField<ChargeBoxRecord, BigDecimal> LOCATION_LONGITUDE = createField(DSL.name("location_longitude"), SQLDataType.DECIMAL(11, 8).defaultValue(DSL.inline("NULL", SQLDataType.DECIMAL)), this, "");
+    public final TableField<ChargeBoxRecord, BigDecimal> LOCATION_LONGITUDE = createField(DSL.name("location_longitude"), SQLDataType.DECIMAL(11, 8), this, "");
 
     /**
      * The column <code>stevedb.charge_box.address_pk</code>.
      */
-    public final TableField<ChargeBoxRecord, Integer> ADDRESS_PK = createField(DSL.name("address_pk"), SQLDataType.INTEGER.defaultValue(DSL.inline("NULL", SQLDataType.INTEGER)), this, "");
+    public final TableField<ChargeBoxRecord, Integer> ADDRESS_PK = createField(DSL.name("address_pk"), SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>stevedb.charge_box.admin_address</code>.
      */
-    public final TableField<ChargeBoxRecord, String> ADMIN_ADDRESS = createField(DSL.name("admin_address"), SQLDataType.VARCHAR(255).defaultValue(DSL.inline("NULL", SQLDataType.VARCHAR)), this, "");
+    public final TableField<ChargeBoxRecord, String> ADMIN_ADDRESS = createField(DSL.name("admin_address"), SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column
