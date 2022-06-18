@@ -43,7 +43,7 @@ public enum SteveConfiguration {
     // Dummy service path
     private final String routerEndpointPath = "/echoSocket";//"/CentralSystemService";
     // Time zone for the application and database connections
-    private final String timeZoneId = "UTC";  // or ZoneId.systemDefault().getId();
+    private final String timeZoneId = "Asia/Taipei";//"UTC";  // or ZoneId.systemDefault().getId();
 
     // -------------------------------------------------------------------------
     // main.properties
